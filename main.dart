@@ -2,6 +2,11 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
+
+const cpuWin = 'CPU가 승리 하였습니다.';
+const playWin = 'Player가 승리 하였습니다.';
+const draw = '비겼습니다.';
+
 void main() {
   print('가위, 바위, 보 중 하나를 정해서 입력해 주세요');
   final String userInput = stdin.readLineSync(encoding: utf8) ?? 'Error';
@@ -12,10 +17,6 @@ void main() {
   print(cpuInput);
   print(getResult(userInput, cpuInput));
 }
-
-const cpuWin = 'CPU가 승리 하였습니다.';
-const playWin = 'Player가 승리 하였습니다.';
-const draw = '비겼습니다.';
 
 String getResult(String userInput, String cpuInput) {
   String result;
